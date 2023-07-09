@@ -62,7 +62,6 @@ func (kc *KafkaConsumer) initConsume() {
 			select {
 			case sig := <-sigchan:
 				fmt.Printf("Caught signal %v: terminating\n", sig)
-				fmt.Println("Signal...............")
 				kc.run = false
 				kc.consume = false
 			default:
